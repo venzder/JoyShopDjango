@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'JoyShopDjango/css/master.css' %}">
+</head>
+<body>
+<div class="header">
+    <div class="HeaderInside">
+        <div class="registration">
+            <div class="RegistrationBar">
+                <div class="reg">
+                    <a href="#">Регистрация</a>
+                </div>
+                <div class="reg">
+                    <a href="#">Вход</a>
+                </div>
+            </div>
+        </div>
+        {% block header_menu %}
+        {% include 'JoyShopDjango/header_menu.html' %}
+        {% endblock %}
+    </div>
+</div>
+{% block page_content %}
+    {% endblock %}
+<div class="footer">
+    <div class="FooterInside">
+        <div class="copyright"><p>&copy;2019 МОИ ИГРУШКИ</p></div>
+    </div>
+</div>
+</body>
+</html>

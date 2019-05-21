@@ -1,0 +1,41 @@
+<div class="header_menu">
+    <ul class="header_menu_list">
+        <li>
+            <a href="{% url 'main:main' %}"
+                class="{% if request.resolver_match.url_name == 'main' %}
+                        active
+                      {% endif %}">
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:about' %}"
+                class="{% if request.resolver_match.url_name == 'about' %}
+                        active
+                      {% endif %}">
+                О проекте
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:sale' %}"
+                class="{% if request.resolver_match.url_name == 'sale' %}
+                        active
+                      {% endif %}">
+                Как купить
+            </a>
+        </li>
+        <li>
+            <a href="#">                >
+                Каталог
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:contacts' %}"
+                class="{% if request.resolver_match.url_name == 'contacts' %}
+                        active
+                      {% endif %}">
+                Контакты
+            </a>
+        </li>
+    </ul>
+        </div>
